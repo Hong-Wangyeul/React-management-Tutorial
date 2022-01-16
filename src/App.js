@@ -1,13 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
+import Customer from './components/Customer';
+import CustomerList from './CustomerList/CustomerList';
+
 
 function App() {
-  return (
-    <div className="gray-background">
-     <img src = {logo} alt='logo' />
-     <h2>Let's develop management system!</h2>
-    </div>
-  );
+    return CustomerList.map((customerList) => {
+          return <Customer key={customerList.id} customerList={customerList} />;
+  } )
+  
 }
 
 export default App;
